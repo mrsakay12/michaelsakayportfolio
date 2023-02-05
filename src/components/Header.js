@@ -17,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "#7FE9DE",
+    
+    
   },
   subtitle: {
     color: "tan",
@@ -57,6 +59,7 @@ const Header = () => {
             "Frontend Developer",
             "Backend Developer",
             "Database Developer",
+             "Full-stack Developer",
           ]}
           typeSpeed={40}
           backSpeed={50}
