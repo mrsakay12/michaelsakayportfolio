@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../makisakay.png";
-
+import Homenav from "./Homenav";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -79,7 +79,7 @@ const Header = () => {
            
 
           </Typography>
-      
+          <Homenav/>
             
            
 

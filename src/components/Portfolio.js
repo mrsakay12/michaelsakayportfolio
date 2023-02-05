@@ -13,7 +13,7 @@ import Typed from "react-typed";
 import project1 from "../images/html-css-javascript-lg.jpg";
 import project2 from "../images/html-css-javascript.jpg";
 import project3 from "../images/javascript-fullstack.jpg";
-
+import Navbar from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -89,7 +89,9 @@ const projects = [
 const Portfolio = () => {
   const classes = useStyles();
   return (
+    
     <Box component="div" className={classes.mainContainer}>
+         <Navbar />
         <Typography variant="h4" align="center" className={classes.heading}>
         List of My Projects
       </Typography>

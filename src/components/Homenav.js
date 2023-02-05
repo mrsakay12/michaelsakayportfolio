@@ -13,7 +13,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Divider from "@material-ui/core/Divider";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 import AssignmentInd from "@material-ui/icons/AssignmentInd";
-import Home from "@material-ui/icons/Home";
+
 import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
 import { makeStyles } from "@material-ui/core/styles";
@@ -23,8 +23,11 @@ import Button from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
-    background: "#8EC3B0",
+    background: "none",
     margin: 0,
+    opacity: 0.8,
+    textSizeAdjust:"50%",
+    
   },
   arrow: {
     color: "#1F8A70",
@@ -47,16 +50,27 @@ const useStyles = makeStyles((theme) => ({
     color: "579BB1",
   },
   toolbar: {
-    
+   
+    justifyContent: "center",
   },
   buttons: {
+    
+
+
+    elevation: 8,
+    borderRadius: 15,
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    background: "#8EC3B0",
+    margin: 0,
+
     color: "#03001C",
     height: "10px",
-    fontSize: "1.2rem",
+    fontSize: "1.6rem",
     justifyContent: "center",
     "&:hover": {
       backgroundColor: "#227C70",
-      fontSize: "1.3rem",
+      fontSize: "1.7rem",
       color: "white",
     },
     
@@ -64,14 +78,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const menuItems = [
-  { listIcon: <Home />, listText: "Home", listPath: "/" },
+ 
   { listIcon: <Apps />, listText: "Projects", listPath: "/portfolio" },
   { listIcon: <AssignmentInd />, listText: "Work Experience", listPath: "/resume" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
 
 ];
 
-const Navbar = () => {
+const Homenav = () => {
   const [open, setOpen] = useState(false);
 
   const classes = useStyles();
@@ -110,8 +124,8 @@ const Navbar = () => {
             </IconButton>
           
             <br></br>
-          <Button  className={classes.buttons}  variant="contained"   onClick={() => setOpen(true)}>Menu </Button> 
-       
+          <Button  className={classes.buttons}  variant="contained"   onClick={() => setOpen(true)}>View My Portfolio </Button>&nbsp;&nbsp;
+          <Button   className={classes.buttons}  variant="outlined" href="https://drive.google.com/file/d/1NNH0Un_1w5ncF7pCwRATTqsX0m9E83ma/view?usp=sharing" target="_blank" >Download My Resume</Button>
           </Toolbar>
         </AppBar>
       </Box>
@@ -123,4 +137,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Homenav;

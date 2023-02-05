@@ -6,14 +6,14 @@ import Facebook from "@material-ui/icons/Facebook";
 import LinkedIn from "@material-ui/icons/LinkedIn";
 import GitHub from "@material-ui/icons/GitHub";
 import DoneRounded from "@material-ui/icons/School";
-
+import Navbar from "./Navbar";
 import CardMedia from "@material-ui/core/CardMedia";
 import project3 from "../images/mern-stack.jpg";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
-
+import Box from "@material-ui/core/Box";
 
 
 
@@ -23,6 +23,11 @@ const useStyles = makeStyles({
     backgroundColor: 'transparent',
     height: "100%",
     marginTop:"70px",
+  },
+  Container: {
+    backgroundColor: 'transparent',
+    height: "100%",
+   
   },
   heading: {
     color: "#59C1BD",
@@ -53,10 +58,10 @@ const Contact = () => {
   const classes = useStyles();
 
   return (
-    
-    
+    <Box component="header" className={classes.Container}>
+    <Navbar />
     <BottomNavigation className={classes.mainContainer}>
-      
+   
        
       <Grid container justify="center"  className={classes.mainContainer}>
         {/* Projects */}
@@ -90,6 +95,7 @@ const Contact = () => {
       <br></br>
     
     </BottomNavigation>
+    </Box>
   );
 };
 export default Contact;
